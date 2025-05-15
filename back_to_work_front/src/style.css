@@ -1,0 +1,41 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 p-0;
+  }
+
+  button {
+    @apply border-none focus:outline-none;
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  a {
+    @apply no-underline;
+  }
+}
+
+.pi {
+    font-family: primeicons;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+
+
+.simpleDelete-button {
+    color:rgb(239, 68, 68);
+    border: 1px solid;
+    
+}
