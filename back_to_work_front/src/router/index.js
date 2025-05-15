@@ -8,6 +8,7 @@ import RegisterFormComponent from "../components/RegisterFormComponent.vue";
 import LoginFormComponent from "../components/LoginFormComponent.vue";
 import VerifyEmailComponent from "../components/VerifyEmailComponent.vue";
 import ResetPasswordFormComponent from "../components/ResetPasswordFormComponent.vue";
+import PaymentComponent from "../components/PaymentComponent.vue";
 
 const routes = [
     { path: '/', component: HomeView, name: 'home' },
@@ -16,6 +17,7 @@ const routes = [
     { path: '/service', component: ServicesView,  name: 'service'},
     { path: '/login', component: LoginFormComponent,  name: 'login'},
     { path: '/register', component: RegisterFormComponent,  name: 'register'},
+    { path: '/payment', component: PaymentComponent,  name: 'payment'},
     { path: '/verify-email', component: VerifyEmailComponent, 
       props: (route) => ({id: route.query.id, hash: route.query.hash, signature: route.query.signature}),
       name: 'verify-email'},
