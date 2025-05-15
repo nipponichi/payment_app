@@ -1,0 +1,30 @@
+<template>
+    <div>
+        <h1 class="bg-green-500">CONTACT</h1>
+        <ResetPasswordComponent />
+        <button class="bg-blue-500 p-4" @click="goToPayment()">Pagar</button>
+<!--         <ContactFormComponent />
+        <ChatComponent /> -->
+    </div>
+</template>
+<script>
+    import ContactFormComponent from '../components/ContactFormComponent.vue';
+    import ResetPasswordComponent from '../components/ResetPasswordComponent.vue';
+    import ChatComponent from '../components/ChatComponent.vue';
+    export default {
+        name: 'ContactView',
+        components: {
+            ContactFormComponent,
+            ResetPasswordComponent,
+            ChatComponent
+        },
+        methods: {
+            goToPayment() {
+                const externalUrl = 'http://localhost:5174/payment';
+                if (externalUrl.startsWith('http://localhost')) {
+                window.open(externalUrl, '_blank'); 
+                }
+            }
+        }
+    };
+</script>
