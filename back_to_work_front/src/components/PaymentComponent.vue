@@ -1,5 +1,14 @@
 <template>
-  <div class="max-w-md mx-auto p-6 bg-white rounded-2xl shadow-lg border border-gray-200 payment-container">
+  <div class="max-w-md mx-auto p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+    <!-- Logo Stripe -->
+    <div class="flex justify-center mb-6">
+      <img
+        src="https://stripe.com/img/v3/home/twitter.png"
+        alt="Stripe"
+        class="h-8 w-auto"
+      />
+    </div>
+
     <p class="text-lg font-semibold text-center text-gray-900 mb-6">
       El importe del pago a efectuar es de {{ paymentAmount }} euros
     </p>
@@ -12,7 +21,7 @@
           <input
             v-model="cardNumber"
             type="text"
-            class="stripe-input peer block w-full rounded-md px-4 py-3 placeholder-gray-400 transition"
+            class="peer block w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
             placeholder="1234 5678 9012 3456"
             autocomplete="cc-number"
             inputmode="numeric"
@@ -31,7 +40,7 @@
           <input
             v-model="cardExpiry"
             type="text"
-            class="stripe-input block w-full rounded-md px-4 py-3 placeholder-gray-400 transition"
+            class="block w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
             placeholder="MM/AA"
             autocomplete="cc-exp"
             maxlength="5"
@@ -42,7 +51,7 @@
           <input
             v-model="cardCvc"
             type="text"
-            class="stripe-input block w-full rounded-md px-4 py-3 placeholder-gray-400 transition"
+            class="block w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
             placeholder="123"
             autocomplete="cc-csc"
             inputmode="numeric"
@@ -56,7 +65,7 @@
           <label class="block text-sm font-semibold text-gray-700 mb-1">País</label>
           <select
             v-model="cardCountry"
-            class="stripe-input block w-full rounded-md px-4 py-3 bg-white transition"
+            class="block w-full rounded-md border border-gray-300 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
             autocomplete="country"
           >
             <option value="">Selecciona país</option>
@@ -70,7 +79,7 @@
           <input
             v-model="cardPostalCode"
             type="text"
-            class="stripe-input block w-full rounded-md px-4 py-3 placeholder-gray-400 transition"
+            class="block w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
             placeholder="12345"
             autocomplete="postal-code"
           />
@@ -230,43 +239,3 @@ function sendPaymentOk() {
   console.log("Pago enviado correctamente... ID de puja:", bidId)
 }
 </script>
-
-<style scoped>
-/* Estilos inspirados en Stripe */
-
-.payment-container {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.stripe-input {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #32325d;
-  background-color: white;
-  border: 1px solid #ccd0d2;
-  box-shadow: inset 0 1px 1px rgb(50 50 93 / 0.1);
-  transition: box-shadow 150ms ease, border-color 150ms ease;
-}
-
-.stripe-input:focus,
-.stripe-input.peer:focus {
-  border-color: #556cd6;
-  box-shadow: 0 0 0 1px #556cd6;
-  outline: none;
-}
-
-.stripe-input::placeholder {
-  color: #aab7c4;
-}
-
-button {
-  cursor: pointer;
-  user-select: none;
-  font-weight: 600;
-}
-
-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(85, 108, 214, 0.5);
-}
-</style>
