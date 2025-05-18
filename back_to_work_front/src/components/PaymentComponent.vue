@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-md mx-auto p-6 bg-white rounded-2xl shadow-lg border border-gray-200">
+  <div class="max-w-md mx-auto p-6 bg-white mt-10 rounded-2xl shadow-lg border border-gray-200">
     <!-- Logo Stripe -->
     <div class="flex justify-center mb-6">
       <img
