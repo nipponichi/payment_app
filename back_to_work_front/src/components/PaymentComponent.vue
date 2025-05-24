@@ -1,9 +1,15 @@
 <template>
   <div class="max-w-md mx-auto p-6 bg-white mt-10 rounded-2xl shadow-lg border border-gray-200">
     <!-- Logo Stripe -->
-    <div class="flex justify-center mb-6">
+    <div class="flex justify-center items-center mb-6">
       <img
-        src="https://stripe.com/img/v3/home/twitter.png"
+        src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Logo_Williams_F1.png"
+        alt="WeAgree"
+        class="h-8 w-auto"
+      />
+      <h2>&nbsp;<span class="text-blue-500">WeAgree</span> Payment by&nbsp;</h2>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg"
         alt="Stripe"
         class="h-8 w-auto"
       />
